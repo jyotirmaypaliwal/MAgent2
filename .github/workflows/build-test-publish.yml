@@ -23,7 +23,7 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-24.04, ubuntu-24.04-arm, macos-26 ]
-        python: [ 311, 312, 313, 314 ]
+        python: [ 311, 312, 313, 314, 315 ]
         include:
         - os: ubuntu-24.04
           platform-name: Linux x64
@@ -60,7 +60,7 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-24.04, ubuntu-24.04-arm, macos-26 ]
-        python-version: [ '3.11', '3.12', '3.13', '3.14' ]
+        python-version: [ '3.11', '3.12', '3.13', '3.14', '3.15']
         include:
         - os: ubuntu-24.04
           architecture: x64
@@ -121,7 +121,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        python-version: [ '3.11', '3.12', '3.13', '3.14' ]
+        python-version: [ '3.11', '3.12', '3.13', '3.14', '3.15']
         architecture: [ x64, arm64 ]
         include:
         - architecture: x64
@@ -158,7 +158,7 @@ jobs:
     - build-wheels-ms
     strategy:
       matrix:
-        python-version: [ '3.11', '3.12', '3.13', '3.14' ]
+        python-version: [ '3.11', '3.12', '3.13', '3.14', '3.15']
         architecture: [ x64, arm64 ]
         include:
         - architecture: x64
